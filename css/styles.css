@@ -241,6 +241,25 @@ section {
   color: var(--light-white);
 }
 
+.about {
+  background: url("../images/about-bg.jpg"),
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+}
+
+.about .flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+}
+
+.about .flex .image {
+  flex: 1 1 30rem;
+}
 /* media queries */
 @media (max-width: 991px) {
   html {
