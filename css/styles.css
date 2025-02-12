@@ -336,6 +336,338 @@ section {
   transform: scale(1);
 }
 
+.info-container {
+  background-color: var(--bg-color);
+}
+
+.info-container .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 26rem);
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.info-container .box-container .box {
+  text-align: center;
+}
+
+.info-container .box-container .box img {
+  height: 10rem;
+  width: 100%;
+  object-fit: contain;
+}
+
+.info-container .box-container .box h3 {
+  margin-top: 1.5rem;
+  font-size: 2rem;
+  color: var(--light-white);
+}
+
+.pricing .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 35rem);
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.pricing .box-container .box {
+  border: var(--border);
+  border-radius: 0.5rem;
+  padding: 2.5rem;
+}
+
+.pricing .box-container .box h3 {
+  font-size: 2.5rem;
+  padding-bottom: 1.5rem;
+  color: var(--white);
+  border-bottom: var(--border);
+}
+
+.pricing .box-container .box .amount {
+  font-size: 3.5rem;
+  margin: 1.5rem 0;
+  text-align: center;
+  color: var(--main-color);
+}
+
+.pricing .box-container .box .amount span {
+  font-size: 2.5rem;
+  color: var(--white);
+}
+
+.pricing .box-container .box .date {
+  font-size: 1.7rem;
+  color: var(--light-white);
+  border-radius: 0.5rem;
+  text-align: center;
+  background-color: var(--bg-color);
+  padding: 0.8rem;
+  border: var(--border);
+}
+
+.pricing .box-container .box .list {
+  padding: 1rem 0;
+  margin-top: 1rem;
+}
+
+.pricing .box-container .box .list p {
+  font-size: 1.6rem;
+  color: var(--light-white);
+  padding: 1rem 0;
+}
+
+.pricing .box-container .box .list p i {
+  margin-right: 1rem;
+}
+
+.pricing .box-container .box .list p .fa-check {
+  color: lime;
+}
+
+.pricing .box-container .box .list p .fa-xmark {
+  color: tomato;
+}
+
+.faq {
+  background: url("../images/faq-bg.jpg"), no-repeat;
+  background-size: cover;
+  background-position: fixed;
+}
+
+.faq .box-container {
+  display: grid;
+  gap: 2rem;
+}
+
+.faq .box-container .box {
+  border: var(--border);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  box-shadow: var(--box-shadow);
+}
+
+.faq .box-container .box .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  color: var(--white);
+  font-size: 2rem;
+}
+
+.faq .box-container .box .title h3 {
+  color: var(--white);
+}
+
+.faq .box-container .box .title .fa-minus {
+  transform: rotate(180deg);
+  transition: 0.2s linear;
+}
+
+.faq .box-container .box .title .fa-plus {
+  transform: rotate(90deg);
+  transition: 0.2s linear;
+}
+
+.faq .box-container .box .content {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: var(--light-white);
+  transform-origin: top;
+  transform: scaleY(0);
+  height: 0;
+}
+
+.faq .box-container .box .content.active {
+  transform: scaleY(1);
+  height: auto;
+  padding-top: 1rem;
+  transition: 0.2s linear;
+}
+
+.contact .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 35rem);
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.contact .box-container .box {
+  background-size: cover !important;
+  background-position: center !important;
+  padding: 6rem 4rem;
+  box-shadow: var(--box-shadow);
+}
+
+.contact .box-container .box:nth-child(2) {
+  text-align: center;
+}
+
+.contact .box-container .box:nth-child(3) {
+  text-align: right;
+}
+
+.contact .box-container .box img {
+  height: 12rem;
+  width: 12rem;
+  margin-bottom: 12rem;
+}
+
+.contact .box-container .box h3 {
+  margin: 1.5rem 0;
+  font-size: 2.5rem;
+  color: var(--white);
+}
+
+.contact .box-container .box a {
+  display: block;
+  text-transform: none;
+  color: var(--light-white);
+  font-size: 1.7rem;
+  line-height: 1.8;
+}
+
+.contact .box-container .box a:hover {
+  text-decoration: underline;
+  color: var(--main-color);
+}
+
+.contact .form {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.contact .form .flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.contact .form .flex .input {
+  flex: 1 1 40rem;
+  padding: 2rem;
+}
+
+.contact .form .input,
+.contact .form textarea {
+  background: none;
+  color: var(--white);
+  border: var(--border);
+  border-radius: 0.5rem;
+  padding: 1.6;
+  font-size: 2rem;
+  text-transform: none;
+}
+
+.contact .form .input:focus,
+.contact .form textarea:focus {
+  border-color: var(--main-color);
+  transition: 0.2s linear;
+}
+
+.contact .form .input::placeholder,
+.contact .form textarea::placeholder {
+  text-transform: capitalize;
+}
+
+.contact .form textarea {
+  height: 20rem;
+  width: 100%;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  resize: none;
+}
+
+.contact .form .btn:hover {
+  background-color: var(--main-color);
+}
+
+.footer {
+  background: url("../images/footer.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.footer .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 30rem);
+  gap: 3rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.footer .box-container .box:last-child {
+  text-align: right;
+}
+
+.footer .box-container .box:nth-child(2) {
+  text-align: center;
+}
+
+.footer .box-container .box h3 {
+  font-size: 2rem;
+  color: var(--main-color);
+  margin-bottom: 1rem;
+}
+
+.footer .box-container .box .link {
+  padding: 1rem 0;
+  font-size: 1.6rem;
+  color: var(--white);
+  display: block;
+}
+
+.footer .box-container .box .link:hover {
+  text-decoration: underline;
+  color: var(--white);
+  text-underline-offset: 0.5rem;
+}
+
+.footer .box-container .box p {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: var(--light-white);
+  padding: 1rem 0;
+}
+
+.footer .box-container .box .share-links {
+  margin-top: 1rem;
+}
+
+.footer .box-container .box .share-links a {
+  height: 4.5rem;
+  width: 4.5rem;
+  line-height: 4.4rem;
+  border-radius: 50%;
+  font-size: 2rem;
+  background-color: var(--white);
+  color: var(--white);
+  margin: 0 0.5rem;
+}
+
+.footer .box-container .box .share-links a:hover {
+  background-color: var(--main-color);
+  color: var(--white);
+}
+
+.footer .credit {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  font-size: 2rem;
+  border-top: var(--border);
+  color: var(--light-white);
+}
+
+.footer .credit span {
+  color: var(--main-color);
+}
+
 /* media queries */
 @media (max-width: 991px) {
   html {
@@ -374,6 +706,11 @@ section {
 
   .home .flex .content h3 {
     font-size: 3.5rem;
+  }
+
+  .footer .credit {
+    justify-content: center;
+    text-align: center;
   }
 }
 
