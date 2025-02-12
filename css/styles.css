@@ -260,6 +260,82 @@ section {
 .about .flex .image {
   flex: 1 1 30rem;
 }
+
+.about .flex .image img {
+  height: 25rem;
+  width: 100%;
+  object-fit: contain;
+  filter: drop-shadow(var(--box-shadow));
+}
+
+.about .flex .content {
+  flex: 1 1 30rem;
+  text-align: center;
+}
+
+.about .flex .content h3 {
+  font-size: 2.5rem;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.about .flex .content p {
+  padding: 0.5rem 0;
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: var(--light-white);
+}
+
+.top-games .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 26rem);
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.top-games .box-container .box {
+  height: 35rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.top-games .box-container .box img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: 0.2s linear;
+}
+
+.top-games .box-container .box:hover img {
+  transform: scale(1.1);
+}
+
+.top-games .box-container .box::before {
+  content: "play now";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--light-white);
+  font-size: 2rem;
+  transform: scale(1.5);
+  transition: 0.2s linear;
+  opacity: 0;
+}
+
+.top-games .box-container .box:hover::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
 /* media queries */
 @media (max-width: 991px) {
   html {
